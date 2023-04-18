@@ -26,6 +26,8 @@ public class UserService {
 
     public User save(UserRequest request) {
         User user = new User();
+        user.setFirstname(request.getFirstname());
+        user.setLastname(request.getLastname());
         user.setUsername(request.getUsername());
 
         return userRepository.save(user);
